@@ -42,7 +42,7 @@ public class DungeonMaster
                 "|_____| \\__,_||__|__||___,_||_____| \\___/ |__|__|    |___|___||__|__| \\___|  |__|  |_____||__|\\_|\r\n" + //
                 "                                                                                                ");
         System.out.println("Wanna Start Again?  1 Yes   !1 No");
-        world1.ConsoleUp(30);
+        world1.ConsoleUp(10);
         try{startagain = scan.nextInt();}
         catch(Exception e){startagain=0;}
 
@@ -157,7 +157,7 @@ ScoreObj[][] scoresDif =
             if(player1.player_health<1){break;}
             System.out.println("Difficulty: "+Difficulty_Text);
             System.out.println("Choose Player Movement:    w Up    s Down    a Left    d Right");
-            this.ConsoleUp(18);       
+            this.ConsoleUp(12);       
             try{input_move = scan.nextLine().charAt(0);}
             catch(final Exception e){input_move = ' ';}
             
