@@ -28,7 +28,7 @@ public class DungeonMaster
         do{
         System.out.println("Choose Difficulty:    0 : Peaceful    1 : Easy    2 : Medium    3 : Hard");
         try{inputDifficulty = scan.nextInt();}
-        catch(Exception e){inputDifficulty = 3;initMessage="I Set Difficulty To HARD Since You Didn't Follow Input Limitations :P !";}
+        catch(Exception e){inputDifficulty = 3;initMessage="Difficulty Set to Hard :P !";}
         }while(inputDifficulty<0||inputDifficulty>3);
         World world1 = new World(35, 10,playerInputName,inputDifficulty,initMessage);
         world1.GamePlay();
@@ -147,7 +147,7 @@ ScoreObj[][] scoresDif =
                     {
                         case 0: msg ="You gained Mana!";if(lastmsgindex==0){lastmsgmodif++;}else{lastmsgmodif=1;}if(modif>1){lastmsgmodif+=modif-1;}lastmsgindex=0;player1.player_score+=modif;player1.addPlayerXP(1);RandomizeScorePos();this.RenderWorld();modif=1;break;
                         case 1: msg ="Wizard Gave You Health!";if(lastmsgindex==1){lastmsgmodif++;}else{lastmsgmodif=1;}if(modif>1){lastmsgmodif+=modif-1;}lastmsgindex=1;player1.player_health+=modif;player1.addPlayerXP(2);RandomizeScorePos();this.RenderWorld();modif=1;break;
-                        case 2: msg ="Noo The Forces Of The Darkness Dealt Damage!";if(lastmsgindex==2){lastmsgmodif++;}else{lastmsgmodif=1;}lastmsgindex=2;player1.subPlayerHealth();RandomizeScorePos();if(player1.player_health<1){player1.player_XP += player1.player_score;player1.player_score=0;}this.RenderWorld();break;
+                        case 2: msg ="The Dark One Dealt Damage!";if(lastmsgindex==2){lastmsgmodif++;}else{lastmsgmodif=1;}lastmsgindex=2;player1.subPlayerHealth();RandomizeScorePos();if(player1.player_health<1){player1.player_XP += player1.player_score;player1.player_score=0;}this.RenderWorld();break;
                     }
                     
                 }
